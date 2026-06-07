@@ -28,7 +28,7 @@ I chose off-campus housing at the University of Illinois Urbana-Champaign (UIUC)
 | 6 | Pacifica on Green (Champaign) | Rent, amenities - *paired with Reddit #16* | https://www.apartments.com/pacifica-on-green-champaign-il/qdf14jw/ |
 | 7 | Campus Oaks (Urbana) | Rent, amenities - *paired with Reddit #17* | https://www.apartments.com/campus-oaks-urbana-il/l1ydpfg/ |
 | 8 | Alley Lofts at the Pilot (Champaign) | Rent, amenities - **listings-only** (no Reddit thread) | https://www.apartments.com/alley-lofts-at-the-pilot-champaign-il/m83pnvh/ |
-| 9 | OCCL (Off-Campus Community Living) | Official UIUC off-campus office for security deposits, subleasing, tenant rights, scam avoidance. The only source for the Q5 process; without it Q5 has nothing to ground in. | https://occl.illinois.edu/ |
+| 9 | OCCL (Off-Campus Community Living) | Official UIUC off-campus office for security deposits, subleasing, tenant rights, scam avoidance. The only source for the Q5 process, without it Q5 has nothing to ground in. | https://occl.illinois.edu/rights-and-responsibilities/rights/summary |
 | 10 | r/UIUC - "Please do not live at Legacy 202" | Strong negative resident experience — pairs with listing #1 | https://www.reddit.com/r/UIUC/comments/16xycks/please_do_not_live_at_legacy_202/ |
 | 11 | r/UIUC - "Experience with The Linc Apartments" | Resident experience - pairs with listing #2 | https://www.reddit.com/r/UIUC/comments/140prcv/experience_with_the_linc_apartments/ |
 | 12 | r/UIUC - "Maywood Apartments…never live here" | Strong negative - pairs with listing #3 | https://www.reddit.com/r/UIUC/comments/ipx5hh/maywood_apartmentsnever_live_here/ |
@@ -94,11 +94,11 @@ I'll validate by printing 5 representative chunks (one listing, one review, one 
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | What is the monthly rent for a 2 bedroom unit at Legacy 202 (202 E Daniel St)? | $1,275  |
-| 2 | Are pets allowed at Legacy 202 (202 E Daniel St)? | No |
-| 3 | Which apartments within 1 mile walking distance of the Main Quad have in-unit laundry and rent under ~$1,000/month? | 1008 S Fourth, Champaign ($940), 501 S. Sixth, Champaign ($835). Note: this is a multi-unit answer spread across listings, if top-k is too low the system may return only one.  |
-| 4 | According to resident/student reviews, what do people say about Roland Realty's management? | Most people commented that they were always very responsive and very helpful! never had any issues with them honestly, while some complained that the management changed and the new staff are terrible. |
-| 5 | What is the legal deadline for a landlord to return a security deposit in Illinois, and what's the process if they don't? | The process should come from the OCCL document (cite it). For the statutory deadline, the system should only state it if it appears in a retrieved chunk, if it doesn't, it should say it lacks enough information rather than supplying the number from the model's training knowledge. |
+| 1 | What is the monthly rent for a 2 bedroom unit at Legacy 202 (202 E Daniel St)? | $1,275 for the 2x2C floor plan ($1,295 for 2x2A and 2x2B), from legacy202.txt.  |
+| 2 | Are pets allowed at Legacy 202 (202 E Daniel St)? | No. legacy202.txt states Legacy202 does not allow pets, though service animals are welcome. |
+| 3 | Which apartments within ~1 mile of the Main Quad have in-unit laundry and a unit renting under ~$1,000/month (by-the-bed pricing counts)? | Maywood ~$899–995; Pacifica 4x3 ~$910–970. Note: this is a multi-unit answer spread across listings, if top-k is too low the system may return only one.  |
+| 4 | According to student reviews, what do people say about management/maintenance at Pacifica on Green (POG)? | Reviews are strongly negative on management. Per reddit_uiuc_1o6pln5.txt (r/UIUC, 2025): the office is described as unresponsive/dismissive — the advertised "luxury coffee bar" is frequently out of supplies, quiet-hours and overnight-guest violations the office declines to address, residents assigned the wrong unit at move-in, a refused internal transfer despite the lease allowing it, stolen food deliveries, and reports of delayed deposit returns. |
+| 5 | Under the Urbana Landlord-Tenant Ordinance, how long does a landlord have to return a security deposit, and what can a tenant do if the landlord doesn't keep the unit in repair? | 45 days. |
 
 ---
 
@@ -145,7 +145,7 @@ flowchart
 
 **Milestone 3 — Ingestion and chunking:**
 Tool: Claude.
-Input: The **Documents** and **Chunking Strategy** sections plus the architecture diagram above.Ask it to implement `load_documents()` (load local `.txt`/PDF files, strip navigation/ads/HTML, normalize whitespace) and `chunk_text()` implementing the structure-aware logic — one record per chunk for reviews/listings, paragraph-merge with ~500-char target and ~75-char overlap for long OCCL pages — attaching `source` and `building` metadata. 
+Input: The **Documents** and **Chunking Strategy** sections plus the architecture diagram above. Ask it to implement `load_documents()` (load local `.txt`/PDF files, strip navigation/ads/HTML, normalize whitespace) and `chunk_text()` implementing the structure-aware logic — one record per chunk for reviews/listings, paragraph-merge with ~500-char target and ~75-char overlap for long OCCL pages - attaching `source` and `building` metadata. 
 Verify: Print 5 representative chunks and confirm each is self-contained, metadata is correct, and no chunk exceeds the token cap or contains HTML artifacts. I'll correct anything that doesn't match the spec and ask Claude to explain any code I don't follow.
 
 **Milestone 4 — Embedding and retrieval:**
