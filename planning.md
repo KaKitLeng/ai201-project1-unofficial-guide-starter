@@ -18,18 +18,25 @@ I chose off-campus housing at the University of Illinois Urbana-Champaign (UIUC)
 <!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
      Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
 
-| # | Source | Description | URL or location |
-|---|--------|-------------|-----------------|
-| 1 | OCCL (Off-Campus Community Living) | Official UIUC off-campus office for subleasing, security deposits, lease/legal tips, scam avoidance | https://occl.illinois.edu/ |
-| 2 | College Pads | Listings with rent + walking distance to campus | https://www.rentcollegepads.com/off-campus-housing/urbana-champaign/search |
-| 3 | Apartments.com (UIUC off-campus) | Listings + resident reviews + neighborhood breakdown (Campustown / Midtown / Downtown) | https://www.apartments.com/off-campus-housing/il/champaign/university-of-illinois-at-urbana-champaign/ |
-| 4 | Redfin (61820 rentals) | Per-unit hard facts: rent, sqft, in-unit laundry, dishwasher, A/C, deposit, availability date | https://www.redfin.com/zipcode/61820/apartments-under-1000-for-rent |
-| 5 | Roland Realty | One major local landlord's units | https://www.roland-realty.com/ |
-| 6 | American Campus Communities (Champaign) | Big Campustown high-rises (309 Green, Tower/Suites at Third) — amenities, location | https://www.americancampus.com/student-apartments/il/champaign |
-| 7 | Amber Student (UIUC) | Verified listings + walking/driving/trapublic transport timing from university | https://amberstudent.com/places/search/university-of-illinois-urbana-2307266880079 |
-| 8 | r/UIUC (search: "slumlord list") | Unofficial layer - landlords to avoid, maintenance/mold complaints, Campustown vs. Urbana debates. | https://www.reddit.com/r/UIUC/comments/1qsl5ad/central_illinois_slumlord_list/ |
-| 9 | r/UIUC (search: "roland realty") | Roland Realty reviews/complains. | https://https://www.reddit.com/r/UIUC/comments/1d7q6is/roland_realty/ |
-| 10 | | | |
+| # | Building | Description | URL |
+|---|----------|-------------|-----|
+| 1 | Legacy 202 (Champaign) | Rent, beds/baths, pet policy, amenities - *paired with Reddit #12* | https://www.apartments.com/legacy202-champaign-il/bct4hpc/ |
+| 2 | The Linc (Urbana) | Rent, amenities, lease terms - *paired with Reddit #13* | https://www.apartments.com/the-linc-apartments-urbana-il/3lf7bxf/ |
+| 3 | Maywood (Champaign) | Rent, amenities - *paired with Reddit #14* | https://www.apartments.com/maywood-apartments-champaign-il/jcvk767/ |
+| 4 | The Alcove at Second & John (Champaign) | Rent, amenities - *paired with Reddit #15* | https://www.apartments.com/the-alcove-second-john-champaign-il/fv2vltr/ |
+| 5 | 202 E Green by Bankier (Champaign) | Rent, amenities - **listings-only** (no Reddit thread) | https://www.apartments.com/202-e-green-st-by-bankier-apartments-champaign-il/vn1k7tf/ |
+| 6 | Pacifica on Green (Champaign) | Rent, amenities - *paired with Reddit #16* | https://www.apartments.com/pacifica-on-green-champaign-il/qdf14jw/ |
+| 7 | Campus Oaks (Urbana) | Rent, amenities - *paired with Reddit #17* | https://www.apartments.com/campus-oaks-urbana-il/l1ydpfg/ |
+| 8 | Alley Lofts at the Pilot (Champaign) | Rent, amenities - **listings-only** (no Reddit thread) | https://www.apartments.com/alley-lofts-at-the-pilot-champaign-il/m83pnvh/ |
+| 9 | OCCL (Off-Campus Community Living) | Official UIUC off-campus office for security deposits, subleasing, tenant rights, scam avoidance. The only source for the Q5 process; without it Q5 has nothing to ground in. | https://occl.illinois.edu/ |
+| 10 | r/UIUC - "Please do not live at Legacy 202" | Strong negative resident experience — pairs with listing #1 | https://www.reddit.com/r/UIUC/comments/16xycks/please_do_not_live_at_legacy_202/ |
+| 11 | r/UIUC - "Experience with The Linc Apartments" | Resident experience - pairs with listing #2 | https://www.reddit.com/r/UIUC/comments/140prcv/experience_with_the_linc_apartments/ |
+| 12 | r/UIUC - "Maywood Apartments…never live here" | Strong negative - pairs with listing #3 | https://www.reddit.com/r/UIUC/comments/ipx5hh/maywood_apartmentsnever_live_here/ |
+| 13 | r/UIUC - "Reviews on The Alcove at Second and John" | Resident experience - pairs with listing #4 | https://www.reddit.com/r/UIUC/comments/1bh3d58/reviews_on_the_alcove_at_second_and_john/ |
+| 14 | r/UIUC - "Sophomore apartment recommendations" | General recommendations across buildings (breadth, not tied to one building) | https://www.reddit.com/r/UIUC/comments/166pc1v/sophomore_apartment_recommendations/ |
+| 15 | r/UIUC - "Don't sign with Pacifica on Green" | Strong negative - pairs with listing #6 | https://www.reddit.com/r/UIUC/comments/1o6pln5/dont_sign_with_pacifica_on_greenpog/ |
+| 16 | r/UIUC - "Campus Oaks Apartments" | Resident experience - pairs with listing #7 | https://www.reddit.com/r/UIUC/comments/hnsu5a/campus_oaks_apartments/ |
+
 
 ---
 
