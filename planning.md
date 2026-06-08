@@ -18,8 +18,8 @@ I chose off-campus housing at the University of Illinois Urbana-Champaign (UIUC)
 <!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
      Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
 
-| # | Building | Description | URL |
-|---|----------|-------------|-----|
+| # | Source | Description | URL or location |
+|---|--------|-------------|-----------------|
 | 1 | Legacy 202 (Champaign) | Rent, beds/baths, pet policy, amenities - *paired with Reddit #12* | https://www.apartments.com/legacy202-champaign-il/bct4hpc/ |
 | 2 | The Linc (Urbana) | Rent, amenities, lease terms - *paired with Reddit #13* | https://www.apartments.com/the-linc-apartments-urbana-il/3lf7bxf/ |
 | 3 | Maywood (Champaign) | Rent, amenities - *paired with Reddit #14* | https://www.apartments.com/maywood-apartments-champaign-il/jcvk767/ |
