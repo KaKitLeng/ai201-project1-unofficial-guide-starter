@@ -298,13 +298,51 @@ def chunk_text(text, size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
     return _merge(_split(text, SEPARATORS, size), size, overlap)
 
 
+FAQ_MARKER = "Frequently Asked Questions"
+
+
+def _split_faq_pairs(faq):
+    """Split a FAQ block into one "Question?\\nAnswer" string per pair. A line ending in
+    "?" starts a new pair; the lines after it (until the next such line) are its answer."""
+    pairs, current = [], []
+    for line in faq.split("\n"):
+        s = line.strip()
+        if not s:
+            continue
+        if s.endswith("?") and current:          # next question -> flush the previous pair
+            pairs.append("\n".join(current))
+            current = [s]
+        else:
+            current.append(s)
+    if current:
+        pairs.append("\n".join(current))
+    return pairs
+
+
+def _doc_segments(doc):
+    """Text blocks to chunk independently. A listing's FAQ becomes one segment per Q&A pair
+    so each answer is an atomic, self-contained chunk (otherwise a multi-topic FAQ chunk lets
+    one answer dilute another, and a pair can split across a boundary). All other text -- and
+    everything above the FAQ -- is a single segment chunked normally."""
+    text = doc["text"]
+    if doc["metadata"]["source_type"] != "listing" or FAQ_MARKER not in text:
+        return [text]
+    head, _, faq = text.partition(FAQ_MARKER)
+    segments = [head.strip()] if head.strip() else []
+    segments.extend(_split_faq_pairs(faq))
+    return segments
+
+
 def build_chunks():
     """Load + clean + chunk everything, copying doc metadata onto each chunk plus a
-    per-document chunk_index."""
+    per-document chunk_index. Listing FAQs are chunked one Q&A pair per chunk."""
     chunks = []
     for doc in load_documents():
-        for i, piece in enumerate(chunk_text(doc["text"])):
-            chunks.append({"text": piece, "metadata": dict(doc["metadata"], chunk_index=i)})
+        i = 0
+        for seg in _doc_segments(doc):
+            for piece in chunk_text(seg):
+                chunks.append({"text": piece, "metadata": dict(doc["metadata"], chunk_index=i)})
+                i += 1
     return chunks
 
 
