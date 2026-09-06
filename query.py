@@ -2,7 +2,7 @@
 query.py - grounded generation for "The Unofficial Guide" (UIUC off-campus housing RAG).
 
 Pipeline: retrieve() (embed.py) -> build a numbered, source-tagged context -> Groq
-llama-3.3-70b-versatile with a hard grounding prompt -> programmatic source attribution.
+openai/gpt-oss-120b with a hard grounding prompt -> programmatic source attribution.
 Out-of-scope questions are refused both before the LLM (a weak-match distance gate) and by
 the grounding prompt itself.
 
@@ -19,7 +19,7 @@ from embed import retrieve
 
 load_dotenv()
 
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "openai/gpt-oss-120b"
 WEAK_MATCH_DISTANCE = 0.8          # cosine distance; backstop for "effectively unrelated"
 REFUSAL = "I don't have enough information on that."
 

@@ -127,7 +127,7 @@ flowchart
         --> B["2. Chunking<br/>custom structure-aware splitter<br/>1 record = 1 chunk;<br/>long docs ~500 char / 75 overlap<br/>+ source &amp; building metadata"]
     B --> C["3. Embedding + Vector Store<br/>all-MiniLM-L6-v2<br/>(sentence-transformers)<br/>→ ChromaDB"]
     C --> D["4. Retrieval<br/>semantic similarity<br/>top-k = 5 + distances"]
-    D --> E["5. Generation<br/>Groq llama-3.3-70b-versatile<br/>grounded prompt (context-only)<br/>+ source attribution"]
+    D --> E["5. Generation<br/>Groq openai/gpt-oss-120b<br/>grounded prompt (context-only)<br/>+ source attribution"]
 ```
 ---
 
